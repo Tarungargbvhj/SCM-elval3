@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCalculator.com</title>
+    <style>
+        * {
+    margin: 0px;
+}
+
+body {
+    background-color: #175c95;
+}
+
+#heading {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    color: #afb5ff;
+}
+
+#heading1 {
+    text-shadow: black 2px 2px 10px;
+    font-size: 3rem;
+    width: 49%;
+    margin-left: 530px;
+}
+
+#heading15 {
+    border: 2px solid rgb(7 12 151 / 71%);
+    box-shadow: rgb(243 243 243) 0px 0px 23px;
+    background-color: rgb(49 100 163 / 89%);
+    color: rgb(168 192 229 / 96%);
+    border-radius: 26px;
+    text-shadow: black -3px 4px 4px;
+    font-family: sans-serif;
+    font-size: 2rem;
+    height: 44px;
+    padding-top: 7px;
+    padding-left: 25px;
+    width: 10.4%;
+}
+
+.mover {
+    background-color: #303ef163;
+    color: #f6fbff;
+    font-family: monospace;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 566px;
+    border: 6px solid #102170;
+    box-shadow: 0px 0px 59px #f0f8ff94;
+    margin-top: 41px;
+    border-radius: 56px;
+}
+
+#display {
+    width: 89%;
+    height: 63px;
+    margin-left: 19px;
+    padding-left: 21px;
+    margin-top: 27.4px;
+    margin-bottom: 10px;
+    border-radius: 17px;
+    background-color: rgb(96, 130, 245);
+    box-shadow: 0px 0px 56px #00a1ff;
+    font-size: 1.8rem;
+    border: 3px solid rgb(0, 0, 137);
+}
+
+#display:hover {
+    background-color: rgb(33 61 155 / 53%);
+    border: 3px solid #1a1af5;
+    box-shadow: 0px 0px 56px #868ef9;
+}
+
+button {
+    width: 14%;
+    height: 72px;
+    font-family: math;
+    font-size: 2rem;
+    margin: 15px;
+    border-radius: 29px;
+    border: 1px black;
+    background-color: #6082f5;
+    box-shadow: 0px 0px 56px #00a1ff;
+    cursor: pointer;
+    border: 3px solid #000089;
+    text-shadow: 0px 0px 10px #5150ad;
+}
+
+button:hover {
+    box-shadow: 0px 0px 56px #868ef9;
+    color: #eddfbe;
+    background-color: rgb(33 61 155 / 53%);
+    text-shadow: 0px 0px 6px cyan;
+    border: 3px solid #0b0bfa;
+}
+
+
+
+#copyright {
+    background-color: #0404046b;
+    height: 100px;
+    margin-top: 55px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.policy {
+    padding-right: 40px;
+    padding-left: 30px;
+}
+
+#cop1 {
+    color: azure;
+}
+
+#cop2 a {
+    text-decoration: none;
+    color: azure;
+}
+
+#cop2 a:hover {
+    color: rgb(130, 169, 206);
+}
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="heading">
+            <li id="heading1" class="heading">Welcome &nbsp; to &nbsp; MyCalculator!</li>
+            <li  id="heading15"><span id="heading2"></span>&nbsp;:&nbsp; <span id="heading3" ></span>&nbsp;:&nbsp;<span id="heading4"></span>&nbsp;</li>
+        </ul>
+    </div>
+    <hr>
+    <marquee class="mover" scrollamount="10px" behavior="" direction="">&star; &star; &star; &star; &nbsp; &nbsp; &nbsp;
+        Welcome &nbsp; to &nbsp; MyCalculator! &nbsp; . &nbsp; Calculate &nbsp; What &nbsp; Ever &nbsp; You &nbsp; Want
+        &nbsp; &nbsp; &nbsp; &star; &star; &star; &star;
+    </marquee>
+    <hr>
+
+    <center>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="buttons">
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="calculateSin()">sin</button>
+                <button onclick="calculateCos()">cos</button>
+                <button onclick="calculateTan()">tan</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('*')">X</button>
+                <button onclick="appendToDisplay('')">^</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="calculateSqrt()">√</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button style="background-color: #00fffc75;" onclick="calculate()">=</button>
+                <button onclick="appendToDisplay('(')">(</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="del ()">&leftarrow;</button>
+                <button onclick="appendToDisplay(')')">)</button>
+            </div>
+    </center>
+    </div>
+    <div>
+        <ul id="copyright">
+            <li id="cop1">&copy &nbsp;Copyright</li>
+            <li id="cop2">
+                <a class="policy" href="#terms">Terms of Use</a>
+                <a class="policy" href="#policy">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+        let display = document.getElementById('display');
+
+function hms(){
+    time=new Date();
+    let hour=time.getHours();
+    console.log(hour)
+    let min=time.getMinutes();
+    console.log(min)
+    let sec=time.getSeconds();
+    console.log(sec)
+    document.getElementById('heading2').innerHTML=hour;
+    document.getElementById('heading3').innerHTML=min;
+    document.getElementById('heading4').innerHTML=sec;
+
+}
+setInterval(hms,1000)
+
+function appendToDisplay(value) {
+    display.value += value;
+}
+
+function clearDisplay() {
+    display.value = '';
+}
+
+function del() {
+    let dis = document.getElementById("display").value;
+    document.getElementById("display").value = dis.substring(0, dis.length - 1);
+  }
+
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+
+function calculateSqrt() {
+    display.value = Math.sqrt(parseFloat(display.value));
+}
+
+function calculateSin() {
+    display.value = Math.sin(parseFloat(display.value));
+}
+
+function calculateCos() {
+    display.value = Math.cos(parseFloat(display.value));
+}
+
+function calculateTan() {
+    display.value = Math.tan(parseFloat(display.value));
+}
+    </script>
+</body>
+</html>
